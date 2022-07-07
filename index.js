@@ -4,6 +4,8 @@
 
  const sqlite = require('sqlite')
  const dbConnection = sqlite.open('banco.sqlite', { Promise })
+
+ const port = process.env.PORT || 3000
     
  app.set ('view engine','ejs')
  app.use (express.static('public'))
@@ -84,7 +86,7 @@ app.post('/admin/categorias/nova', async (req,res) => {
     res.redirect('/admin/categorias')
 })
 
-//comment
+
 app.get('/admin/vagas/editar/:id', async(req,res) => {
     const db = await dbConnection
     const categorias = await db.all('select * from categorias')
@@ -126,7 +128,7 @@ const init = async() => {
      }
 
 init() 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
     if(err){
         console.log('Nao foi possivel iniciar o servidor do Jobs Digital.')
     }else{

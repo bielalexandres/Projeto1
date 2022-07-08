@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "projeto1",
+    "builds": [
+        { "src": "index.js", "use": "vercel/server" }
+    ],
+    "routes": [
+        { "src": "/.*",  "status": 404,"dest": "index.js" }
+    ]
+}

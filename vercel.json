@@ -7,11 +7,16 @@
          }
     ],
     "routes": [
-        { "src": "/.*",
+        {"src": "/(.*)",
          "status": 404, 
-         "dest": "/index.js" }
-    
-    
+         "dest": "/index.js" },
+
+         {
+            "src": "/",
+            "dest": "/index.js",
+            "methods": 
+              "GET"
+        }
+
     ] 
 }
-//comment//

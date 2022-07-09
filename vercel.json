@@ -2,9 +2,16 @@
     "version": 2,
     "name": "projeto1",
     "builds": [
-        { "src": "index.js", "use": "@vercel/node" }
+        { 
+            "src": "./index.js", 
+            "use": "@vercel/node" 
+         }
     ],
     "routes": [
-        { "src": "/.*",  "status": 404,"dest": "index.js" }
+        { 
+            "src": "/(.*)",  
+            "status": 404,
+            "dest": "/" 
+        }
     ]
 }

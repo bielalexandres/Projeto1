@@ -11,8 +11,7 @@
         { 
             "src": "/(.*)",  
             "status": 404,
-            "dest": "/" 
-        }
+            "dest": "index.js" 
+    }
     ]
 }
-
